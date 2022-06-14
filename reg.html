@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="reg.css">
+    <title>REGISTRATION</title>
+</head>
+<body>
+
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+
+
+
+<header>
+    <aside class="menyu">
+        <div class="dropdown">
+            <button class="dropbtn">
+                <p class="bt">M</p>
+                <p class="bt">E</p>
+                <p class="bt">N</p>
+                <p class="bt">U</p>
+            </button>
+            <div class="dropdown-content">
+                <a href="home.html">HOME</a>
+                <a href="about.html">ABOUT</a>
+                <a href="reg.html">REGISTER</a>
+                <a href="alumni.html">ALUMNI</a>
+                <a href="">STAFF</a>
+                <a href="">CONTACTS</a>
+            </div>
+        </div>
+    </aside>
+    <div class="skulname">
+        <p align="center" class="tito">SATSS ACADEMIC REGISTRATION INFORMATION SYSTEM</p>
+        <button class="butts" onclick="login()">LOG IN</button>
+        <button class="butts" onclick="regist()">REGISTER</button>
+    </div>
+</header>
+<main align="center">
+    <br><br><br><br><br><br>
+    <form method="post" action="login.php" >
+        <label for="ue">UserName OR E-mail</label>
+        <input type="text" placeholder="username or email" id="ue" name="ue"><br><br>
+        <label for="paswd">Password</label>
+        <input type="password" placeholder="password" id="paswd" name="paswd"><br><br>
+        <input type="submit" value="LOG IN" id="log">
+    </form>
+    <style>
+        main{
+            margin-top: 75px;
+            width: 45%;
+            height: 400px;
+            margin-left: 350px;
+            background-image: url("bg1.png");
+            border-radius: 15px;
+        }
+        #log{
+            margin-left: 97px;
+        }
+        #paswd{
+            margin-left: 107px;
+        }
+        form{
+            font-family: "Agency FB";
+            font-weight: 700;
+            color: darkred;
+            font-size: 30px;
+        }
+        input{
+            height: 30px;
+            border-radius: 4px;
+        }
+
+    </style>
+</main>
+<script>
+    function regist(){
+    let mein = document.querySelector("main");
+    mein.remove();
+    let div = document.createElement('div');
+    div.innerHTML = "<div class=\"wrapper\">\n" +
+        "    <br><br>\n" +
+        "    <form method=\"post\" action=\"reg.php\">\n" +
+        "        <section class=\"fast\">\n" +
+        "            <h3>Personal Information</h3>\n" +
+        "        <label for=\"fname\">First Name</label>\n" +
+        "        <input type=\"text\" placeholder=\"first name\" id=\"fname\" name=\"fname\"><br><br>\n" +
+        "        <label for=\"mname\">Middle Name</label>\n" +
+        "        <input type=\"text\" placeholder=\"middle name\" id=\"mname\" name=\"mname\"><br><br>\n" +
+        "        <label for=\"surname\">Surname</label>\n" +
+        "        <input type=\"text\" placeholder=\"surname\" id=\"surname\" name=\"surname\"><br><br>\n" +
+        "        <label for=\"dob\">Date Of Birth</label>\n" +
+        "        <input type=\"date\" placeholder=\"birth date\" id=\"dob\" name=\"dob\">\n" +
+        "        </section>\n" +
+        "        <section class=\"stdacc\">\n" +
+        "            <h3>Student's Account</h3>\n" +
+        "            <label for=\"username\">Username</label>\n" +
+        "            <input type=\"text\" placeholder=\"username\" id=\"username\" name=\"username\"><br><br>\n" +
+        "            <label for=\"mail\">E-mail</label>\n" +
+        "            <input type=\"email\" placeholder=\"email\" id=\"mail\" name=\"mail\" onkeyup=\"validator()\" onkeydown=\"validator()\"><br><br>\n" +
+        "            <label for=\"pswd\">Password</label>\n" +
+        "            <input type=\"password\" placeholder=\"password\" id=\"pswd\" name=\"pswd\"><br><br>\n" +
+        "<p id=\"teller\" ></p>\n"+
+        "        </section>\n" +
+        "        <section class=\"cont\">\n" +
+        "            <h3>Contacts</h3>\n" +
+        "            <label for=\"phone\">Phone</label>\n" +
+        "            <input type=\"text\" placeholder=\"phone number\" id=\"phone\" name=\"phone\"><br><br>\n" +
+        "            <label for=\"fb\">Facebook</label>\n" +
+        "            <input type=\"text\" placeholder=\"facebook\" id=\"fb\" name=\"fb\"><br><br>\n" +
+        "            <label for=\"tweet\">Twitter</label>\n" +
+        "            <input type=\"text\" placeholder=\"@twitter\" id=\"tweet\" name=\"tweet\"><br><br>\n" +
+        "            <label for=\"insta\">Instagram</label>\n" +
+        "            <input type=\"text\" placeholder=\"instagram\" id=\"insta\" name=\"insta\"><br><br>\n" +
+        "        </section>\n" +
+        "        <section class=\"CV\">\n" +
+        "            <label for=\"cv\">Curriculumn Vitae (Cv)</label>\n" +
+        "            <input type=\"file\" placeholder=\"Cv\" id=\"cv\" name=\"cv\">\n" +
+        "        </section>\n" +
+        "        <br><br>\n" +
+        "        <section class=\"submi\">\n" +
+        "            <input type=\"submit\" value=\"SUBMIT\">\n" +
+        "        </section>\n" +
+        "    </form>\n" +
+        "</div>\n" +
+        "<style>\n" +
+        "    #fname{\n" +
+        "    margin-left: 17px;\n" +
+        "}\n" +
+        "#mname{\n" +
+        "    margin-left: 9px;\n" +
+        "}\n" +
+        "#surname{\n" +
+        "    margin-left: 26px;\n" +
+        "}\n" +
+        "#dob{\n" +
+        "    margin-left: 7px;\n" +
+        "    width: 100px;\n" +
+        "}\n" +
+        "#pswd{\n" +
+        "    margin-left: 3px;\n" +
+        "}\n" +
+        "form{\n" +
+        "    display: block;\n" +
+        "}\n" +
+        ".stdacc{\n" +
+        "    margin-left: 330px;\n" +
+        "    margin-top: -195px;\n" +
+        "}\n" +
+        ".wrapper{\n" +
+        "    margin-top: 100px;\n" +
+        "    background-image: url(\"bg1.png\");\n" +
+        "    width: 900px;\n" +
+        "    height: 400px;\n" +
+        "    margin-left: 230px;\n" +
+        "    border-radius: 20px;\n" +
+        "    font-weight: 400;\n" +
+        "    color: darkred;\n" +
+        "    font-family: Agency FB;\n" +
+        "}\n" +
+        "#mail{\n" +
+        "    margin-left: 20px;\n" +
+        "}\n" +
+        "#phone{\n" +
+        "    margin-left: 26px;\n" +
+        "}\n" +
+        "#tweet{\n" +
+        "    margin-left: 21px;\n" +
+        "}\n" +
+        "#fb{\n" +
+        "    margin-left: 10px;\n" +
+        "}\n" +
+        ".cont{\n" +
+        "    margin-left: 605px;\n" +
+        "    margin-top: -185px;\n" +
+        "}\n" +
+        ".CV{\n" +
+        "    margin-left: 250px;\n" +
+        "}\n" +
+        ".submi{\n" +
+        "    margin-left: 425px;\n" +
+        "}\n" +
+        ".insta{\n"+
+        "  margin-left: 19px;\n"+
+        "}\n"+
+        ".fast{\n" +
+        "    margin-left: 30px;\n" +
+        "}\n" +
+        "</style>"
+        document.body.appendChild(div);
+    }
+</script>
+<script>
+    function login(){
+        location.reload();
+    }
+    /*function validator(){
+        let mail = document.getElementById("mail");
+        let msg = document.getElementById("teller");
+        if(mail.value.match(/[a-zA-Z\d._-]+@[a-zA-Z]+\.[a-z]/) != null){
+            msg.innerHTML = "valid email";
+            msg.style.color = "green";
+            msg.style.fontSize = "18px";
+            msg.style.fontStyle = "italic";
+        }
+        else{
+            msg.innerHTML = "invalid email, try again";
+            msg.style.color = "red";
+            msg.style.fontStyle = "italic";
+            msg.style.fontSize = "18px";
+        }
+    }*/
+</script>
+</body>
+
+</html>

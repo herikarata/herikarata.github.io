@@ -1,0 +1,126 @@
+html {
+    height:100%;
+}
+
+.bt{
+    margin-left: 0;
+}
+.menyu{
+    float: left;
+    margin-top: 0;
+}
+.dropbtn{
+    background-color: #c5c6d0;
+    text-transform: revert;
+    font-size: 16px;
+    border: none;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgb(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover{background-color: #ddd;text-decoration: underline; color: darkred; font-size: 20px; font-family: Agency FB}
+.dropdown:hover .dropdown-content{display: block; margin-left: 30px; margin-top: -10px; }
+.dropdown:hover .dropbtn{background-color: #7f7d9c;float: right;}
+
+body {
+    margin:0;
+}
+
+.bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #7f7d9c 50%, #faf9f6 50%, #89cff0 100%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+}
+
+.bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+}
+
+.bg3 {
+    animation-duration:5s;
+}
+
+.content {
+    background-color:rgba(255,255,255,.8);
+    border-radius:.25em;
+    box-shadow:0 0 .25em rgba(0,0,0,.25);
+    box-sizing:border-box;
+    left:50%;
+    padding:10vmin;
+    position:fixed;
+    text-align:center;
+    top:50%;
+    transform:translate(-50%, -50%);
+}
+
+h1 {
+    font-family:monospace;
+}
+
+@keyframes slide {
+    0% {
+        transform:translateX(-25%);
+    }
+    100% {
+        transform:translateX(25%);
+    }
+}
+header{
+    font-family: "Agency FB";
+    background-color:rgba(255,255,255,.8);
+    font-size: 30px;
+    font-weight: 700;
+    word-spacing: 10px;
+}
+header p{
+    margin-top: 10px;
+    border: 3px black;
+}
+header button{
+    float: right;
+    font-size: 25px;
+    margin-top: -66px;
+    height: 36px;
+    border: 1px;
+    border-radius: 0;
+}
+button:hover{
+    text-decoration: underline;
+}
+#uno{
+    margin-right: 85px;
+}
+#uno:after{
+    content: ' |';
+}
+#jaki{
+    margin-top: -66px;
+    float: right;
+    height: 36px;
+    margin-right: 200px;
+    font-size: 25px;
+    border: 1px;
+}
+#jaki:after{
+    content: ' |';
