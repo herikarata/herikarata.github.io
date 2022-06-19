@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <link rel="stylesheet" href="contacts.css">
+    <title>CONTACTS</title>
+</head>
+<body>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+<header>
+  <p align="center">St' Augustine-Taghaste Secondary School</p>
+</header>
+<aside class="menyu">
+  <div class="dropdown">
+    <button class="dropbtn">
+      <p class="bt">M</p>
+      <p class="bt">E</p>
+      <p class="bt">N</p>
+      <p class="bt">U</p>
+    </button>
+    <div class="dropdown-content">
+      <a href="home.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="reg.html">REGISTER</a>
+      <a href="alumni.html">ALUMNI</a>
+      <a href="staff.html">STAFF</a>
+      <a href="contacts.html">CONTACTS</a>
+    </div>
+  </div>
+</aside>
+
+<div id="dre">
+  <p id="uno">Phone Number: +255 679 844 679</p>
+  <p id="de"> E-mail: hreishine@gmail.com</p>
+</div>
+<br>
+<div class="fcf-body">
+
+  <div id="fcf-form">
+    <h3 class="fcf-h3">Contact us</h3>
+
+    <form id="fcf-form-id" class="fcf-form-class" method="post" action="process.php">
+
+      <div class="fcf-form-group">
+        <label for="Name" class="fcf-label">Your name</label>
+        <div class="fcf-input-group">
+          <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+        </div>
+      </div>
+
+      <div class="fcf-form-group">
+        <label for="Email" class="fcf-label">Your email address</label>
+        <div class="fcf-input-group">
+          <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+        </div>
+      </div>
+
+      <div class="fcf-form-group">
+        <label for="Message" class="fcf-label">Your message</label>
+        <div class="fcf-input-group">
+          <textarea id="Message" name="Message" class="fcf-form-control" rows="2" maxlength="3000" required></textarea>
+        </div>
+      </div>
+
+      <div class="fcf-form-group">
+        <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+      </div>
+
+
+
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
