@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ALUMNI</title>
+    <link rel="stylesheet" href="alumni.css">
+</head>
+<body>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+
+<aside class="menyu">
+    <div class="dropdown">
+        <button class="dropbtn">
+            <p class="bt">M</p>
+            <p class="bt">E</p>
+            <p class="bt">N</p>
+            <p class="bt">U</p>
+        </button>
+        <div class="dropdown-content">
+            <a href="home.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="reg.html">REGISTER</a>
+            <a href="alumni.html">ALUMNI</a>
+            <a href="staff.html">STAFF</a>
+            <a href="staff.html">CONTACTS</a>
+        </div>
+    </div>
+</aside>
+
+<header>
+    <p align="center">St' Augustine-Taghaste Alumni Forum</p>
+    <button id="uno" onclick="registor()">Register</button>
+    <button onclick="login()">Log In</button>
+</header>
+<button id="jaki" onclick="alumni()">Gallery</button>
+<main align="center" id="mein">
+<br><br><br><br><br><br>
+<form method="post" action="login1.php" >
+    <label for="ue">UserName OR E-mail</label>
+    <input type="text" placeholder="username or email" id="ue" name="ue"><br><br>
+    <label for="paswd">Password</label>
+    <input type="password" placeholder="password" id="paswd" name="paswd"><br><br>
+    <input type="submit" value="LOG IN" id="log">
+</form>
+<style>
+    main{
+        margin-top: 75px;
+        width: 45%;
+        height: 400px;
+        margin-left: 350px;
+        background-color:rgba(255,255,255,.8);
+        border-radius: 15px;
+    }
+    #log{
+        margin-left: 97px;
+    }
+    #paswd{
+        margin-left: 107px;
+    }
+    form{
+        font-family: "Agency FB";
+        font-weight: 700;
+        color: darkred;
+        font-size: 30px;
+    }
+    input{
+        height: 30px;
+        border-radius: 4px;
+    }
+
+</style>
+</main>
+<script>
+
+    function alumni(){
+        let div = document.createElement("div")
+        div.id = "piki";
+        let mein = document.querySelector("main");
+        let ins = !!document.getElementById("inserted");
+        let x = document.getElementById("inserted");
+        if (ins){
+        x.remove();
+            div.innerHTML = "<div class=\"container\">\n" +
+                "    <div class=\"top\">\n" +
+                "        <ul>\n" +
+                "        <li><a href=\"#img_1\"><img src=\"a1.jpg\"></a> </li>\n" +
+                "        <li><a href=\"#img_2\"><img src=\"a2.jpg\"></a> </li>\n" +
+                "        <li><a href=\"#img_3\"><img src=\"a3.jpg\"></a> </li>\n" +
+                "        <li><a href=\"#img_4\"><img src=\"a4.jpg\"></a> </li>\n" +
+                "        <li><a href=\"#img_5\"><img src=\"a5.jpg\"></a> </li>\n" +
+                "        <li><a href=\"#img_6\"><img src=\"a6.jpg\"></a> </li>\n" +
+                "        <li><a href=\"#img_7\"><img src=\"a7.jpg\"></a> </li>\n" +
+                "        <li><a href=\"#img_8\"><img src=\"a8.jpg\"></a> </li>\n" +
+                "        <li><a href=\"#img_9\"><img src=\"a9.jpg\"></a> </li>\n" +
+                "        <li><a href=\"#img_10\"><img src=\"a10.JPG\"></a> </li>\n" +
+                "            <li><a href=\"#img_5\"><img src=\"a5.jpg\"></a> </li>\n" +
+                "            <li><a href=\"#img_6\"><img src=\"a6.jpg\"></a> </li>\n" +
+                "        </ul>\n" +
+                "        <a href=\"#_1\" class=\"lightbox trans\" id=\"img_1\"><img src=\"a1.jpg\"></a>\n" +
+                "        <a href=\"#_2\" class=\"lightbox trans\" id=\"img_2\"><img src=\"a2.jpg\"></a>\n" +
+                "        <a href=\"#_3\" class=\"lightbox trans\" id=\"img_3\"><img src=\"a3.jpg\"></a>\n" +
+                "        <a href=\"#_4\" class=\"lightbox trans\" id=\"img_4\"><img src=\"a4.jpg\"></a>\n" +
+                "        <a href=\"#_5\" class=\"lightbox trans\" id=\"img_5\"><img src=\"a5.jpg\"></a>\n" +
+                "        <a href=\"#_6\" class=\"lightbox trans\" id=\"img_6\"><img src=\"a6.jpg\"></a>\n" +
+                "        <a href=\"#_7\" class=\"lightbox trans\" id=\"img_7\"><img src=\"a7.jpg\"></a>\n" +
+                "        <a href=\"#_8\" class=\"lightbox trans\" id=\"img_8\"><img src=\"a8.jpg\"></a>\n" +
+                "        <a href=\"#_9\" class=\"lightbox trans\" id=\"img_9\"><img src=\"a9.jpg\"></a>\n" +
+                "        <a href=\"#_10\" class=\"lightbox trans\" id=\"img_10\"><img src=\"a10.JPG\"></a>\n" +
+                "        <a href=\"#_5\" class=\"lightbox trans\" id=\"img_5\"><img src=\"a5.jpg\"></a>\n" +
+                "        <a href=\"#_6\" class=\"lightbox trans\" id=\"img_6\"><img src=\"a6.jpg\"></a>\n" +
+                "    </div>\n" +
+                "</div>\n" +
+                "\n" +
+                "<style>\n" +
+                "\n" +
+                ".container\n" +
+                "{\n" +
+                "width: 800px;\n" +
+                "    height: 500px;\n" +
+                "    margin-left: 240px;\n" +
+                "    margin-top: 120px;\n" +
+                "}\n" +
+                ".trans\n" +
+                "{\n" +
+                "transition: all 1s ease;\n" +
+                "-moz-transition: all 1s ease;\n" +
+                "-ms-transition: all 1s ease;\n" +
+                "-o-transition: all 1s ease;\n" +
+                "-webkit-transition: all 1s ease;\n" +
+                "}\n" +
+                ".top\n" +
+                "{\n" +
+                "display: flex;\n" +
+                "    width: 800px;\n" +
+                "    height: 500px;\n" +
+                "margin-top: 10vh;\n" +
+                "margin-left: auto;\n" +
+                "margin-right: auto;\n" +
+                "margin-bottom: 10vh;\n" +
+                "}\n" +
+                ".top ul\n" +
+                "{\n" +
+                "list-style: none;\n" +
+                "width: 100%;\n" +
+                "height: 100%;\n" +
+                "z-index: 1;\n" +
+                "box-sizing: border-box;\n" +
+                "}\n" +
+                ".top ul li\n" +
+                "{\n" +
+                "position: relative;\n" +
+                "float: left;\n" +
+                "width: 25%;\n" +
+                "height: 25%;\n" +
+                "overflow: hidden;\n" +
+                "}\n" +
+                "\n" +
+                ".top ul li::before\n" +
+                "{\n" +
+                "position: absolute;\n" +
+                "top: 0;\n" +
+                "left: 0;\n" +
+                "width: 100%;\n" +
+                "height: 100%;\n" +
+                "background-color: #000;\n" +
+                "content: '';\n" +
+                "color: white;\n" +
+                "opacity: 0.4;\n" +
+                "text-align: center;\n" +
+                "box-sizing: border-box;\n" +
+                "pointer-events: none;\n" +
+                "transition: all 0.5s ease;\n" +
+                "-moz-transition: all 0.5s ease;\n" +
+                "-ms-transition: all 0.5s ease;\n" +
+                "-o-transition: all 0.5s ease;\n" +
+                "-webkit-transition: all 0.5s ease;\n" +
+                "}\n" +
+                ".top ul li:hover::before\n" +
+                "{\n" +
+                "opacity: 0;\n" +
+                "background-color: rgba(0,0,0,0.90);\n" +
+                "}\n" +
+                ".top ul li img\n" +
+                "{\n" +
+                "width: 100%;\n" +
+                "height: auto;\n" +
+                "overflow: hidden;\n" +
+                "}\n" +
+                ".lightbox\n" +
+                "{\n" +
+                "position: fixed;\n" +
+                "width: 100%;\n" +
+                "height: 100%;\n" +
+                "text-align: center;\n" +
+                "top: 0;\n" +
+                "left: 0;\n" +
+                "background-color: rgba(0,0,0,0.75);\n" +
+                "z-index: 999;\n" +
+                "opacity: 0;\n" +
+                "pointer-events: none;\n" +
+                "}\n" +
+                ".lightbox img\n" +
+                "{\n" +
+                "max-width: 90%;\n" +
+                "max-height: 80%;\n" +
+                "position: relative;\n" +
+                "top: -100%;\n" +
+                "/* Transition */\n" +
+                "transition: all 1s ease;\n" +
+                "-moz-transition: all 1s ease;\n" +
+                "-ms-transition: all 1s ease;\n" +
+                "-o-transition: all 1s ease;\n" +
+                "-webkit-transition: all 1s ease;\n" +
+                "}\n" +
+                ".lightbox:target\n" +
+                "{\n" +
+                "outline: none;\n" +
+                "top: 0;\n" +
+                "opacity: 1;\n" +
+                "pointer-events: auto;\n" +
+                "transition: all 1.2s ease;\n" +
+                "-moz-transition: all 1.2s ease;\n" +
+                "-ms-transition: all 1.2s ease;\n" +
+                "-o-transition: all 1.2s ease;\n" +
+                "-webkit-transition: all 1.2s ease;\n" +
+                "}\n" +
+                ".lightbox:target img\n" +
+                "{\n" +
+                "top: 0;\n" +
+                "top: 50%;\n" +
+                "transform: translateY(-50%);\n" +
+                "-moz-transform: translateY(-50%);\n" +
+                "-ms-transform: translateY(-50%);\n" +
+                "-o-transform: translateY(-50%);\n" +
+                "-webkit-transform: translateY(-50%);\n" +
+                "}\n" +
+                "</style>";
+            document.body.appendChild(div);
+        }
+        mein.remove();
+        div.innerHTML = "<div class=\"container\">\n" +
+            "    <div class=\"top\">\n" +
+            "        <ul>\n" +
+            "        <li><a href=\"#img_1\"><img src=\"a1.jpg\"></a> </li>\n" +
+            "        <li><a href=\"#img_2\"><img src=\"a2.jpg\"></a> </li>\n" +
+            "        <li><a href=\"#img_3\"><img src=\"a3.jpg\"></a> </li>\n" +
+            "        <li><a href=\"#img_4\"><img src=\"a4.jpg\"></a> </li>\n" +
+            "        <li><a href=\"#img_5\"><img src=\"a5.jpg\"></a> </li>\n" +
+            "        <li><a href=\"#img_6\"><img src=\"a6.jpg\"></a> </li>\n" +
+            "        <li><a href=\"#img_7\"><img src=\"a7.jpg\"></a> </li>\n" +
+            "        <li><a href=\"#img_8\"><img src=\"a8.jpg\"></a> </li>\n" +
+            "        <li><a href=\"#img_9\"><img src=\"a9.jpg\"></a> </li>\n" +
+            "        <li><a href=\"#img_10\"><img src=\"a10.JPG\"></a> </li>\n" +
+            "            <li><a href=\"#img_5\"><img src=\"a5.jpg\"></a> </li>\n" +
+            "            <li><a href=\"#img_6\"><img src=\"a6.jpg\"></a> </li>\n" +
+            "        </ul>\n" +
+            "        <a href=\"#_1\" class=\"lightbox trans\" id=\"img_1\"><img src=\"a1.jpg\"></a>\n" +
+            "        <a href=\"#_2\" class=\"lightbox trans\" id=\"img_2\"><img src=\"a2.jpg\"></a>\n" +
+            "        <a href=\"#_3\" class=\"lightbox trans\" id=\"img_3\"><img src=\"a3.jpg\"></a>\n" +
+            "        <a href=\"#_4\" class=\"lightbox trans\" id=\"img_4\"><img src=\"a4.jpg\"></a>\n" +
+            "        <a href=\"#_5\" class=\"lightbox trans\" id=\"img_5\"><img src=\"a5.jpg\"></a>\n" +
+            "        <a href=\"#_6\" class=\"lightbox trans\" id=\"img_6\"><img src=\"a6.jpg\"></a>\n" +
+            "        <a href=\"#_7\" class=\"lightbox trans\" id=\"img_7\"><img src=\"a7.jpg\"></a>\n" +
+            "        <a href=\"#_8\" class=\"lightbox trans\" id=\"img_8\"><img src=\"a8.jpg\"></a>\n" +
+            "        <a href=\"#_9\" class=\"lightbox trans\" id=\"img_9\"><img src=\"a9.jpg\"></a>\n" +
+            "        <a href=\"#_10\" class=\"lightbox trans\" id=\"img_10\"><img src=\"a10.JPG\"></a>\n" +
+            "        <a href=\"#_5\" class=\"lightbox trans\" id=\"img_5\"><img src=\"a5.jpg\"></a>\n" +
+            "        <a href=\"#_6\" class=\"lightbox trans\" id=\"img_6\"><img src=\"a6.jpg\"></a>\n" +
+            "    </div>\n" +
+            "</div>\n" +
+            "\n" +
+            "<style>\n" +
+            "\n" +
+            ".container\n" +
+            "{\n" +
+            "width: 800px;\n" +
+            "    height: 500px;\n" +
+            "    margin-left: 240px;\n" +
+            "    margin-top: 120px;\n" +
+            "}\n" +
+            ".trans\n" +
+            "{\n" +
+            "transition: all 1s ease;\n" +
+            "-moz-transition: all 1s ease;\n" +
+            "-ms-transition: all 1s ease;\n" +
+            "-o-transition: all 1s ease;\n" +
+            "-webkit-transition: all 1s ease;\n" +
+            "}\n" +
+            ".top\n" +
+            "{\n" +
+            "display: flex;\n" +
+            "    width: 800px;\n" +
+            "    height: 500px;\n" +
+            "margin-top: 10vh;\n" +
+            "margin-left: auto;\n" +
+            "margin-right: auto;\n" +
+            "margin-bottom: 10vh;\n" +
+            "}\n" +
+            ".top ul\n" +
+            "{\n" +
+            "list-style: none;\n" +
+            "width: 100%;\n" +
+            "height: 100%;\n" +
+            "z-index: 1;\n" +
+            "box-sizing: border-box;\n" +
+            "}\n" +
+            ".top ul li\n" +
+            "{\n" +
+            "position: relative;\n" +
+            "float: left;\n" +
+            "width: 25%;\n" +
+            "height: 25%;\n" +
+            "overflow: hidden;\n" +
+            "}\n" +
+            "\n" +
+            ".top ul li::before\n" +
+            "{\n" +
+            "position: absolute;\n" +
+            "top: 0;\n" +
+            "left: 0;\n" +
+            "width: 100%;\n" +
+            "height: 100%;\n" +
+            "background-color: #000;\n" +
+            "content: '';\n" +
+            "color: white;\n" +
+            "opacity: 0.4;\n" +
+            "text-align: center;\n" +
+            "box-sizing: border-box;\n" +
+            "pointer-events: none;\n" +
+            "transition: all 0.5s ease;\n" +
+            "-moz-transition: all 0.5s ease;\n" +
+            "-ms-transition: all 0.5s ease;\n" +
+            "-o-transition: all 0.5s ease;\n" +
+            "-webkit-transition: all 0.5s ease;\n" +
+            "}\n" +
+            ".top ul li:hover::before\n" +
+            "{\n" +
+            "opacity: 0;\n" +
+            "background-color: rgba(0,0,0,0.90);\n" +
+            "}\n" +
+            ".top ul li img\n" +
+            "{\n" +
+            "width: 100%;\n" +
+            "height: auto;\n" +
+            "overflow: hidden;\n" +
+            "}\n" +
+            ".lightbox\n" +
+            "{\n" +
+            "position: fixed;\n" +
+            "width: 100%;\n" +
+            "height: 100%;\n" +
+            "text-align: center;\n" +
+            "top: 0;\n" +
+            "left: 0;\n" +
+            "background-color: rgba(0,0,0,0.75);\n" +
+            "z-index: 999;\n" +
+            "opacity: 0;\n" +
+            "pointer-events: none;\n" +
+            "}\n" +
+            ".lightbox img\n" +
+            "{\n" +
+            "max-width: 90%;\n" +
+            "max-height: 80%;\n" +
+            "position: relative;\n" +
+            "top: -100%;\n" +
+            "/* Transition */\n" +
+            "transition: all 1s ease;\n" +
+            "-moz-transition: all 1s ease;\n" +
+            "-ms-transition: all 1s ease;\n" +
+            "-o-transition: all 1s ease;\n" +
+            "-webkit-transition: all 1s ease;\n" +
+            "}\n" +
+            ".lightbox:target\n" +
+            "{\n" +
+            "outline: none;\n" +
+            "top: 0;\n" +
+            "opacity: 1;\n" +
+            "pointer-events: auto;\n" +
+            "transition: all 1.2s ease;\n" +
+            "-moz-transition: all 1.2s ease;\n" +
+            "-ms-transition: all 1.2s ease;\n" +
+            "-o-transition: all 1.2s ease;\n" +
+            "-webkit-transition: all 1.2s ease;\n" +
+            "}\n" +
+            ".lightbox:target img\n" +
+            "{\n" +
+            "top: 0;\n" +
+            "top: 50%;\n" +
+            "transform: translateY(-50%);\n" +
+            "-moz-transform: translateY(-50%);\n" +
+            "-ms-transform: translateY(-50%);\n" +
+            "-o-transform: translateY(-50%);\n" +
+            "-webkit-transform: translateY(-50%);\n" +
+            "}\n" +
+            "</style>";
+        document.body.appendChild(div);
+    }
+
+    function registor(){
+        let div = document.createElement("div");
+        let x = !!document.getElementById("mein");
+        let mein = document.getElementById("mein");
+        div.id = "inserted";
+        if (mein){
+            mein.remove();
+        div.innerHTML = "<div align=\"center\" id=\"rap\">\n" +
+            "  <br><br>\n" +
+            "<form method=\"post\" action=\"alumni.php\">\n" +
+            "  <label for=\"nam\">Name</label>\n" +
+            "  <input type=\"text\" placeholder=\"name\" id=\"nam\" name=\"nam\"><br><br>\n" +
+            "  <label for=\"yeenr\">Year Enrolled</label>\n" +
+            "  <select id=\"yeenr\" name=\"yeenr\">\n" +
+            "    <option value=\"\"></option>\n" +
+            "    <option value=\"2014\">2014</option>\n" +
+            "    <option value=\"2015\">2015</option>\n" +
+            "    <option value=\"2016\">2016</option>\n" +
+            "    <option value=\"2017\">2017</option>\n" +
+            "    <option value=\"2018\">2018</option>\n" +
+            "    <option value=\"2019\">2019</option>\n" +
+            "    <option value=\"2020\">2020</option>\n" +
+            "    <option value=\"2021\">2021</option>\n" +
+            "    <option value=\"2022\">2022</option>\n" +
+            "  </select><br><br>\n" +
+            "  <label for=\"yegrad\">Grad Year</label>\n" +
+            "  <select name=\"yegrad\" id=\"yegrad\">\n" +
+            "    <option value=\"\"></option>\n" +
+            "    <option value=\"2017\">2017</option>\n" +
+            "    <option value=\"2018\">2018</option>\n" +
+            "    <option value=\"2019\">2019</option>\n" +
+            "    <option value=\"2020\">2020</option>\n" +
+            "    <option value=\"2021\">2021</option>\n" +
+            "  </select><br><br>\n" +
+            "  <label for=\"he\">Enrollment Headmaster</label>\n" +
+            "  <select name=\"he\" id=\"he\">\n" +
+            "    <option value=\"\"></option>\n" +
+            "    <option value=\"Mrs. KISHIMBO\">Mrs. KISHIMBO</option>\n" +
+            "    <option value=\"Mr. BARAKA\">Mr. BARAKA</option>\n" +
+            "    <option value=\"Mr. MARCO\">Mr. MARCO</option>\n" +
+            "    <option value=\"Mrs. PENELOPE\">Mrs. PENELOPE</option>\n" +
+            "    <option value=\"Mrs. DANIEL\">Mrs. DANIEL</option>\n" +
+            "  </select><br><br>\n" +
+            "  <label for=\"hg\">Graduation Headmaster</label>\n" +
+            "  <select name=\"hg\" id=\"hg\">\n" +
+            "    <option value=\"\"></option>\n" +
+            "    <option value=\"Mrs. KISHIMBO\">Mrs. KISHIMBO</option>\n" +
+            "    <option value=\"Mr. BARAKA\">Mr. BARAKA</option>\n" +
+            "    <option value=\"Mr. MARCO\">Mr. MARCO</option>\n" +
+            "    <option value=\"Mrs. PENELOPE\">Mrs. PENELOPE</option>\n" +
+            "    <option value=\"Mrs. DANIEL\">Mrs. DANIEL</option>\n" +
+            "  </select><br><br>\n" +
+            "  <label for=\"famtich\">Famous Teacher</label>\n" +
+            "  <input type=\"text\" placeholder=\"famous teacher\" id=\"famtich\" name=\"famtich\"><br><br>\n" +
+            "  <label for=\"results\">Results</label>\n" +
+            "  <select name=\"results\" id=\"results\">\n" +
+            "    <option value=\"\"></option>\n" +
+            "    <option value=\"1.7\">1.7</option>\n" +
+            "    <option value=\"1.8\">1.8</option>\n" +
+            "    <option value=\"1.9\">1.9</option>\n" +
+            "    <option value=\"1.10\">1.10</option>\n" +
+            "    <option value=\"1.11\">1.11</option>\n" +
+            "    <option value=\"1.12\">1.12</option>\n" +
+            "    <option value=\"1.13\">1.13</option>\n" +
+            "    <option value=\"1.14\">1.14</option>\n" +
+            "    <option value=\"1.15\">1.15</option>\n" +
+            "    <option value=\"1.16\">1.16</option>\n" +
+            "    <option value=\"1.17\">1.17</option>\n" +
+            "    <option value=\"2.18\">2.18</option>\n" +
+            "    <option value=\"2.19\">2.19</option>\n" +
+            "    <option value=\"2.20\">2.20</option>\n" +
+            "    <option value=\"3.21\">3.21</option>\n" +
+            "    <option value=\"3.22\">3.22</option>\n" +
+            "    <option value=\"3.23\">3.23</option>\n" +
+            "  </select>\n" +
+            "  <br><br>\n" +
+            "  <label for=\"occup\">Occupation</label>\n" +
+            "  <input type=\"text\" placeholder=\"occupation\" id=\"occup\" name=\"occup\"><br><br>\n" +
+            "  <label for=\"addr\">Address</label>\n" +
+            "  <input type=\"text\" placeholder=\"address\" id=\"addr\" name=\"addr\"><br><br>\n" +
+            "  <label for=\"mail\">E-mail</label>\n" +
+            "  <input type=\"email\" placeholder=\"email\" id=\"mail\" name=\"mail\"><br><br>\n" +
+            "  <label for=\"mail\">Password</label>\n" +
+            "  <input type=\"password\" placeholder=\"password\" id=\"mail\" name=\"pass\"><br><br>\n" +
+            "  <label for=\"phone\">Phone</label>\n" +
+            "  <input type=\"text\" placeholder=\"phone number\" id=\"phone\" name=\"phone\"><br><br>\n" +
+            "  <input type=\"submit\" value=\"REGISTER\" id=\"submts\">\n" +
+            "</form>\n" +
+            "</div>\n" +
+            "<style>\n" +
+            "  #yegrad{\n" +
+            "    width: 177px;\n" +
+            "    margin-left: 45px;\n" +
+            "  }\n" +
+            "  #yeenr{\n" +
+            "    width: 177px;\n" +
+            "    margin-left: 25px;\n" +
+            "  }\n" +
+            "  #famtich{\n" +
+            "    margin-left: 6px;\n" +
+            "  }\n" +
+            "  #results{\n" +
+            "    width: 177px;\n" +
+            "    margin-left: 63px;\n" +
+            "  }\n" +
+            "  #occup{\n" +
+            "    margin-left: 39px;\n" +
+            "  }\n" +
+            "  #addr{\n" +
+            "    margin-left: 58px;\n" +
+            "  }\n" +
+            "  #mail{\n" +
+            "    margin-left: 70px;\n" +
+            "  }\n" +
+            "  #phone{\n" +
+            "    margin-left: 71px;\n" +
+            "  }\n" +
+            "  #nam{\n" +
+            "    margin-left: 74px;\n" +
+            "  }\n" +
+            "  form{\n" +
+            "    font-family: \"Agency FB\", serif;\n" +
+            "    font-size: 20px;\n" +
+            "  }\n" +
+            "  #rap{\n" +
+            "    background-color:rgba(255,255,255,.8);\n" +
+            "    box-shadow:0 0 .25em rgba(0,0,0,.25);\n" +
+            "    height: 630px;\n" +
+            "    width: 45%;\n" +
+            "    margin-left: 375px;\n" +
+            "    border-radius: 15px;\n" +
+            "    margin-top: -25px;\n" +
+            "  }\n" +
+            "</style>";
+        document.body.appendChild(div);}
+
+        let piki = !!document.getElementById("piki");
+        let y = document.getElementById("piki");
+        if(piki){
+            y.remove();
+            div.innerHTML = "<div align=\"center\" id=\"rap\">\n" +
+                "  <br><br>\n" +
+                "<form method=\"post\" action=\"alumni.php\">\n" +
+                "  <label for=\"nam\">Name</label>\n" +
+                "  <input type=\"text\" placeholder=\"name\" id=\"nam\" name=\"nam\"><br><br>\n" +
+                "  <label for=\"yeenr\">Year Enrolled</label>\n" +
+                "  <select id=\"yeenr\" name=\"yeenr\">\n" +
+                "    <option value=\"\"></option>\n" +
+                "    <option value=\"2014\">2014</option>\n" +
+                "    <option value=\"2015\">2015</option>\n" +
+                "    <option value=\"2016\">2016</option>\n" +
+                "    <option value=\"2017\">2017</option>\n" +
+                "    <option value=\"2018\">2018</option>\n" +
+                "    <option value=\"2019\">2019</option>\n" +
+                "    <option value=\"2020\">2020</option>\n" +
+                "    <option value=\"2021\">2021</option>\n" +
+                "    <option value=\"2022\">2022</option>\n" +
+                "  </select><br><br>\n" +
+                "  <label for=\"yegrad\">Grad Year</label>\n" +
+                "  <select name=\"yegrad\" id=\"yegrad\">\n" +
+                "    <option value=\"\"></option>\n" +
+                "    <option value=\"2017\">2017</option>\n" +
+                "    <option value=\"2018\">2018</option>\n" +
+                "    <option value=\"2019\">2019</option>\n" +
+                "    <option value=\"2020\">2020</option>\n" +
+                "    <option value=\"2021\">2021</option>\n" +
+                "  </select><br><br>\n" +
+                "  <label for=\"famtich\">Famous Teacher</label>\n" +
+                "  <input type=\"text\" placeholder=\"famous teacher\" id=\"famtich\" name=\"famtich\"><br><br>\n" +
+                "  <label for=\"results\">Results</label>\n" +
+                "  <select name=\"results\" id=\"results\">\n" +
+                "    <option value=\"\"></option>\n" +
+                "    <option value=\"1.7\">1.7</option>\n" +
+                "    <option value=\"1.8\">1.8</option>\n" +
+                "    <option value=\"1.9\">1.9</option>\n" +
+                "    <option value=\"1.10\">1.10</option>\n" +
+                "    <option value=\"1.11\">1.11</option>\n" +
+                "    <option value=\"1.12\">1.12</option>\n" +
+                "    <option value=\"1.13\">1.13</option>\n" +
+                "    <option value=\"1.14\">1.14</option>\n" +
+                "    <option value=\"1.15\">1.15</option>\n" +
+                "    <option value=\"1.16\">1.16</option>\n" +
+                "    <option value=\"1.17\">1.17</option>\n" +
+                "    <option value=\"2.18\">2.18</option>\n" +
+                "    <option value=\"2.19\">2.19</option>\n" +
+                "    <option value=\"2.20\">2.20</option>\n" +
+                "    <option value=\"3.21\">3.21</option>\n" +
+                "    <option value=\"3.22\">3.22</option>\n" +
+                "    <option value=\"3.23\">3.23</option>\n" +
+                "  </select>\n" +
+                "  <br><br>\n" +
+                "  <label for=\"occup\">Occupation</label>\n" +
+                "  <input type=\"text\" placeholder=\"occupation\" id=\"occup\" name=\"occup\"><br><br>\n" +
+                "  <label for=\"addr\">Address</label>\n" +
+                "  <input type=\"text\" placeholder=\"address\" id=\"addr\" name=\"addr\"><br><br>\n" +
+                "  <label for=\"mail\">E-mail</label>\n" +
+                "  <input type=\"email\" placeholder=\"email\" id=\"mail\" name=\"mail\"><br><br>\n" +
+                "  <label for=\"phone\">Phone</label>\n" +
+                "  <input type=\"text\" placeholder=\"phone number\" id=\"phone\" name=\"phone\"><br><br>\n" +
+                "  <input type=\"submit\" value=\"REGISTER\" id=\"submts\">\n" +
+                "</form>\n" +
+                "</div>\n" +
+                "<style>\n" +
+                "  #yegrad{\n" +
+                "    width: 177px;\n" +
+                "    margin-left: 45px;\n" +
+                "  }\n" +
+                "  #yeenr{\n" +
+                "    width: 177px;\n" +
+                "    margin-left: 25px;\n" +
+                "  }\n" +
+                "  #famtich{\n" +
+                "    margin-left: 6px;\n" +
+                "  }\n" +
+                "  #results{\n" +
+                "    width: 177px;\n" +
+                "    margin-left: 63px;\n" +
+                "  }\n" +
+                "  #occup{\n" +
+                "    margin-left: 39px;\n" +
+                "  }\n" +
+                "  #addr{\n" +
+                "    margin-left: 58px;\n" +
+                "  }\n" +
+                "  #mail{\n" +
+                "    margin-left: 70px;\n" +
+                "  }\n" +
+                "  #phone{\n" +
+                "    margin-left: 71px;\n" +
+                "  }\n" +
+                "  #nam{\n" +
+                "    margin-left: 74px;\n" +
+                "  }\n" +
+                "  form{\n" +
+                "    font-family: \"Agency FB\", serif;\n" +
+                "    font-size: 20px;\n" +
+                "  }\n" +
+                "  #rap{\n" +
+                "    background-color:rgba(255,255,255,.8);\n" +
+                "    box-shadow:0 0 .25em rgba(0,0,0,.25);\n" +
+                "    height: 500px;\n" +
+                "    width: 45%;\n" +
+                "    margin-left: 375px;\n" +
+                "    border-radius: 15px;\n" +
+                "    margin-top: 75px;\n" +
+                "  }\n" +
+                "</style>";
+            document.body.appendChild(div);
+        }
+    }
+    function login(){
+        location.reload();
+    }
+</script>
+</body>
+</html>
